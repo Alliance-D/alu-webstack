@@ -41,11 +41,11 @@ frontend  Alli-frontend-http
         default_backend Alli-backend
 
 frontend Alli-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.abizeraoreste.tech.pem
+	bind *:443 ssl crt /etc/haproxy/certs/www.alliance-d.tech.pem
 	http-request set-header X-Forwarded-Proto https
 	default_backend Alli-backend
 
 backend Alli-backend
         balance roundrobin
-        server 6238-web-01 54.196.216.8:80 check
-        server 6238-web-02 98.80.15.59:80 check
+        server 6238-web-01 34.224.40.255:80 check
+        server 6238-web-02 54.226.238.37:80 check
